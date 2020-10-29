@@ -5,7 +5,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    for (let node of this.$el.children) {
+      let name = node.nodeName.toLowerCase();
+      if (name !== "button") {
+        console.warn(
+          `z-button-group 的子元素应该全部是 z-button，但是你写的是 ${name}，因此在样式上会有不尽人意的差别！`
+        );
+      }
+    }
+  },
+};
 </script>
 
 <style lang="scss">
