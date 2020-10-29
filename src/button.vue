@@ -3,12 +3,11 @@
     class="z-button"
     :class="{[`icon-${iconPosition}`]:true}"
   >
-    <svg
+    <z-icon
       v-if="icon"
-      class="icon"
-    >
-      <use :xlink:href=`#i-${icon}`></use>
-    </svg>
+      :name="icon"
+    ></z-icon>
+
     <div class="content">
       <slot></slot>
     </div>
