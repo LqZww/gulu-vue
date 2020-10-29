@@ -31,33 +31,43 @@
       font-size: var(--font-size);
     }
   </style>
-
+  <style>
+    .button>div {
+      padding: 1em;
+    }
+  </style>
 </head>
 
 <body>
   <div id="app">
-    <div>
+    <div class="button">
       <h2>按钮</h2>
+      <!-- 添加icon、icon-position -->
       <div>
-        <!-- 添加icon、icon-position -->
-        <div>
-          <z-button>按钮</z-button>
-          <z-button icon="settings">按钮</z-button>
-          <z-button icon="settings" icon-position="right">按钮</z-button>
-        </div>
-        <!-- 添加loading -->
-        <div>
-          <z-button loading>按钮</z-button>
-          <z-button icon="settings" loading>按钮</z-button>
-          <z-button icon="settings" icon-position="right" loading>按钮</z-button>
-        </div>
-        <!-- 切换loading状态 -->
-        <div>
-          <z-button :loading="loading1" @click="loading1 = !loading1">按钮</z-button>
-          <z-button icon="settings" :loading="loading2" @click="loading2 = !loading2">按钮</z-button>
-          <z-button icon="settings" icon-position="right" :loading="loading3" @click="loading3 = !loading3">按钮
-          </z-button>
-        </div>
+        <z-button>按钮</z-button>
+        <z-button icon="settings">按钮</z-button>
+        <z-button icon="settings" icon-position="right">按钮</z-button>
+      </div>
+      <!-- 添加loading -->
+      <div>
+        <z-button loading>按钮</z-button>
+        <z-button icon="settings" loading>按钮</z-button>
+        <z-button icon="settings" icon-position="right" loading>按钮</z-button>
+      </div>
+      <!-- 切换loading状态 -->
+      <div>
+        <z-button :loading="loading1" @click="loading1 = !loading1">按钮</z-button>
+        <z-button icon="settings" :loading="loading2" @click="loading2 = !loading2">按钮</z-button>
+        <z-button icon="settings" icon-position="right" :loading="loading3" @click="loading3 = !loading3">按钮
+        </z-button>
+      </div>
+      <!-- z-button-group -->
+      <div>
+        <z-button-group>
+          <z-button icon="left">上一页</z-button>
+          <z-button>更多</z-button>
+          <z-button icon="right" icon-position="right">下一页</z-button>
+        </z-button-group>
       </div>
     </div>
 
