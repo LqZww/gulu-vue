@@ -2,10 +2,17 @@
   <button
     class="z-button"
     :class="{[`icon-${iconPosition}`]:true}"
+    @click="$emit('click')"
   >
     <z-icon
-      v-if="icon"
+      v-if="icon && !loading"
       :name="icon"
+      class="icon"
+    ></z-icon>
+    <z-icon
+      class="loading icon"
+      name="loading"
+      v-if="loading"
     ></z-icon>
 
     <div class="content">
@@ -18,6 +25,10 @@
 export default {
   props: {
     icon: {},
+    loading: {
+      type: Boolean,
+      default: false,
+    },
     iconPosition: {
       type: String,
       default: "left",
@@ -30,6 +41,15 @@ export default {
 </script>
 
 <style lang="scss">
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .z-button {
   font-size: var(--font-size);
   height: var(--button-height);
@@ -73,6 +93,10 @@ export default {
     > .content {
       order: 1;
     }
+  }
+
+  .loading {
+    animation: spin 1s infinite linear;
   }
 }
 </style>

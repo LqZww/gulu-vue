@@ -36,13 +36,35 @@
 
 <body>
   <div id="app">
-    <z-button>按钮</z-button>
-    <z-button icon="settings">按钮</z-button>
-    <z-button icon="settings" icon-position="right">按钮</z-button>
+    <div>
+      <h2>按钮</h2>
+      <div>
+        <!-- 添加icon、icon-position -->
+        <div>
+          <z-button>按钮</z-button>
+          <z-button icon="settings">按钮</z-button>
+          <z-button icon="settings" icon-position="right">按钮</z-button>
+        </div>
+        <!-- 添加loading -->
+        <div>
+          <z-button loading>按钮</z-button>
+          <z-button icon="settings" loading>按钮</z-button>
+          <z-button icon="settings" icon-position="right" loading>按钮</z-button>
+        </div>
+        <!-- 切换loading状态 -->
+        <div>
+          <z-button :loading="loading1" @click="loading1 = !loading1">按钮</z-button>
+          <z-button icon="settings" :loading="loading2" @click="loading2 = !loading2">按钮</z-button>
+          <z-button icon="settings" icon-position="right" :loading="loading3" @click="loading3 = !loading3">按钮
+          </z-button>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <script src="./src/app.js"></script>
-  <script src="//at.alicdn.com/t/font_2165286_c8kkmimzox.js"></script>
+  <script src="//at.alicdn.com/t/font_2165286_25x5s91ahah.js"></script>
 
 </body>
 
