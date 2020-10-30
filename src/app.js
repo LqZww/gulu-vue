@@ -17,7 +17,13 @@ new Vue({
 })
 
 // 单元测试
-import { expect } from 'chai'
+// import { expect } from 'chai';
+import chai from 'chai';
+const expect = chai.expect
+
+import spies from 'chai-spies';
+chai.use(spies)
+
 
 // 1. 测试 icon
 {
@@ -94,4 +100,22 @@ import { expect } from 'chai'
   expect(order).to.eq('2')
   vm.$el.remove()
   vm.$destroy()
+}
+// 5. 测试 click
+{
+  const Constructor = Vue.extend(Button)
+  const vm = new Constructor({
+    propsData: {
+      icon: 'settings'
+    }
+  })
+  vm.$mount()
+  let spy = chai.spy(() => {
+
+  })
+  vm.$on('click', spy)
+
+  let button = vm.$el
+  button.click()
+  expect(spy).to.have.been.called()
 }
