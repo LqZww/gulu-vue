@@ -1,8 +1,6 @@
 # Vue UI 组件
 
-[![Build Status](https://travis-ci.org/LqZww/gulu-vue.svg?branch=master)](https://travis-ci.org/LqZww/gulu-vue)
-
-![NPM](https://img.shields.io/npm/l/gulu-vue.svg)
+[![Build Status](https://travis-ci.org/LqZww/gulu-vue.svg?branch=master)](https://travis-ci.org/LqZww/gulu-vue) ![NPM](https://img.shields.io/npm/l/gulu-vue.svg)
 
 ## 介绍
 
