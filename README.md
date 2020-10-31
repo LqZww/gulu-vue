@@ -2,16 +2,63 @@
 
 [![Build Status](https://travis-ci.org/LqZww/gulu-vue.svg?branch=master)](https://travis-ci.org/LqZww/gulu-vue)
 
+![NPM](https://img.shields.io/npm/l/gulu-vue.svg)
+
 ## 介绍
 
+一个基于 Vue 的 UI 框架 !
+
 ## 开始使用
-1. 安装
 
-使用本框架前，请在 CSS 中使用 border-box
+1. 添加 CSS 样式
 
-```
-*{box-sizing: border-box;}
-```
+    使用本框架前，请在 CSS 中使用 border-box 
+
+    ```
+    *,*::before,*::after{box-sizing: border-box;}
+    ```
+
+    IE 8 及以上浏览器都将支持。
+
+    然后设置默认颜色相关变量：
+    ```
+    html {
+      --button-height: 32px;
+      --font-size: 14px;
+      --button-bg: #FFFFFF;
+      --button-active-bg: #eee;
+      --border-radius: 4px;
+      --color: #333;
+      --border-color: #999999;
+      --border-color-hover: #666;
+    }
+    ```
+
+2. 安装
+
+    ```
+    npm i --save gulu-vue-zww
+    ```
+
+3. 引入 gulu-vue-zww
+
+    ```
+    import { Button } from "gulu-vue-zww";
+    import "gulu-vue-zww/dist/index.css";
+
+    export default {
+      components: {
+        "z-button": Button,
+      },
+    };
+    ```
+
+4. 引入 svg symbols
+
+    ```
+    <script src="//at.alicdn.com/t/font_2165286_25x5s91ahah.js"></script>
+    ```
+
 
 ## 文档
 
