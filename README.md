@@ -20,7 +20,7 @@
 
     IE 8 及以上浏览器都将支持。
 
-    然后设置默认颜色相关变量：
+    然后设置默认颜色相关变量（存在兼容性问题）：
     ```
     html {
       --button-height: 32px;
@@ -52,13 +52,6 @@
       },
     };
     ```
-
-4. 引入 svg symbols
-
-    ```
-    <script src="//at.alicdn.com/t/font_2165286_25x5s91ahah.js"></script>
-    ```
-
 
 ## 文档
 
