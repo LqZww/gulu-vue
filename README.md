@@ -1,6 +1,10 @@
-# Vue UI 组件
+<h2 align="center">Vue UI 组件</h2>
 
-[![Build Status](https://travis-ci.org/LqZww/gulu-vue.svg?branch=master)](https://travis-ci.org/LqZww/gulu-vue) [![npm version](https://badge.fury.io/js/gulu-vue-zww.svg)](https://badge.fury.io/js/gulu-vue-zww) ![NPM](https://img.shields.io/npm/l/gulu-vue.svg)
+<p align="center">
+  <a href="https://travis-ci.org/LqZww/gulu-vue"><img src="https://travis-ci.org/LqZww/gulu-vue.svg?branch=master" alt="Build Status"></a>
+  <a href="https://badge.fury.io/js/gulu-vue-zww"><img src="https://badge.fury.io/js/gulu-vue-zww.svg" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/gulu-vue-zww"><img src="https://img.shields.io/npm/l/gulu-vue.svg" alt="NPM"></a>
+</p>
 
 ## 介绍
 
