@@ -32,7 +32,8 @@
     }
   </style>
   <style>
-    .button>div {
+    .button>div,
+    .input>div {
       padding: 1em;
     }
   </style>
@@ -71,6 +72,17 @@
       </div>
     </div>
 
+    <div class="input">
+      <h2>input</h2>
+      <div>
+        <z-input value="hello"></z-input>
+        <z-input value="world" disabled></z-input>
+        <z-input value="gulu" readonly></z-input>
+      </div>
+      <div>
+        <z-input value="vue" error="错误信息"></z-input>
+      </div>
+    </div>
   </div>
 
   <script src="./src/app.js"></script>
