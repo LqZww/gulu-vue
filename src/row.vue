@@ -2,6 +2,7 @@
   <div
     class="row"
     :style="rowStyle"
+    :class="rolClass"
   >
     <slot></slot>
   </div>
@@ -14,6 +15,12 @@ export default {
     gutter: {
       type: [Number, String],
     },
+    align: {
+      type: String,
+      validator(value) {
+        return ["left", "right", "center"].includes(value);
+      },
+    },
   },
   computed: {
     rowStyle() {
@@ -22,6 +29,10 @@ export default {
         marginLeft: -gutter / 2 + "px",
         marginRight: -gutter / 2 + "px",
       };
+    },
+    rolClass() {
+      let { align } = this;
+      return [align && `align-${align}`];
     },
   },
   mounted() {
@@ -36,5 +47,17 @@ export default {
 <style lang="scss" scoped>
 .row {
   display: flex;
+
+  &.align-left {
+    justify-content: flex-start;
+  }
+
+  &.align-right {
+    justify-content: flex-end;
+  }
+
+  &.align-center {
+    justify-content: center;
+  }
 }
 </style>
