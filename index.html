@@ -41,6 +41,7 @@
       border: 1px solid black;
     }
   </style>
+
 </head>
 
 <body>
@@ -95,7 +96,6 @@
         <z-button @click="message+=1">+1</z-button>
       </div>
     </div>
-
 
     <div class="grid">
       <h2>栅格布局</h2>
@@ -160,6 +160,13 @@
         <z-col span="4"></z-col>
         <z-col span="8" offset="2"></z-col>
         <z-col span="8" offset="2"></z-col>
+      </z-row>
+
+      <z-row gutter="20">
+        <z-col span="24" :ipad="{span:8}" :narrow-pc="{span:4}" :pc="{span:2}" :wide-pc="{span:1}">
+        </z-col>
+        <z-col span="24" :ipad="{span:16}" :narrow-pc="{span:20}" :pc="{span:22}" :wide-pc="{span:23}">
+        </z-col>
       </z-row>
     </div>
   </div>
