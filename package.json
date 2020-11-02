@@ -1,6 +1,6 @@
 {
   "name": "gulu-vue-zww",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Vue UI 框架",
   "main": "dist/index.js",
   "scripts": {
