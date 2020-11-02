@@ -36,6 +36,10 @@
     .input>div {
       padding: 1em;
     }
+
+    .grid {
+      border: 1px solid black;
+    }
   </style>
 </head>
 
@@ -90,6 +94,73 @@
         <p>{{message}}</p>
         <z-button @click="message+=1">+1</z-button>
       </div>
+    </div>
+
+
+    <div class="grid">
+      <h2>栅格布局</h2>
+      <z-row>
+        <z-col></z-col>
+        <z-col></z-col>
+      </z-row>
+
+      <z-row>
+        <z-col></z-col>
+        <z-col></z-col>
+        <z-col></z-col>
+      </z-row>
+
+      <z-row>
+        <z-col></z-col>
+        <z-col></z-col>
+        <z-col></z-col>
+        <z-col></z-col>
+      </z-row>
+
+      <z-row>
+        <z-col span="2"></z-col>
+        <z-col span="22"></z-col>
+      </z-row>
+
+      <z-row>
+        <z-col span="2"></z-col>
+        <z-col span="20" offset="2"></z-col>
+      </z-row>
+
+      <z-row>
+        <z-col span="4"></z-col>
+        <z-col span="8" offset="2"></z-col>
+        <z-col span="8" offset="2"></z-col>
+      </z-row>
+
+      <z-row gutter="20">
+        <z-col></z-col>
+        <z-col></z-col>
+      </z-row>
+
+      <z-row gutter="20">
+        <z-col></z-col>
+        <z-col></z-col>
+        <z-col></z-col>
+      </z-row>
+
+      <z-row gutter="20">
+        <z-col></z-col>
+        <z-col></z-col>
+        <z-col></z-col>
+        <z-col></z-col>
+      </z-row>
+
+      <z-row gutter="20">
+        <z-col span="2"></z-col>
+        <z-col span="20" offset="2"></z-col>
+      </z-row>
+
+      <z-row gutter="20">
+        <z-col span="4"></z-col>
+        <z-col span="8" offset="2"></z-col>
+        <z-col span="8" offset="2"></z-col>
+      </z-row>
     </div>
   </div>
 
