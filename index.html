@@ -85,6 +85,11 @@
       <div>
         <z-input value="监听change" @change="inputChange"></z-input>
       </div>
+      <div>
+        <z-input v-model="message"></z-input>
+        <p>{{message}}</p>
+        <z-button @click="message+=1">+1</z-button>
+      </div>
     </div>
   </div>
 
